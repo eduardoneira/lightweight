@@ -1,9 +1,8 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import {useParams} from "react-router-dom";
 import routines from "../data/routines";
 
 const RoutinePage = () => {
-    const { id } = useParams();
+    const {id} = useParams();
     const routine = routines.find((r) => r.id === id);
 
     if (!routine) return <p className="p-4">Routine not found</p>;
